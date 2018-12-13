@@ -1,0 +1,15 @@
+{
+    "name": "map-data-server",
+    "version": "1.0.0",
+    "description": "Server of map data",
+    "main": "app.js",
+    "scripts": {
+	"start": "nodemon app.js",
+	"test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Andrianambinina Marius Rabenarivo",
+    "license": "ISC",
+    "dependencies": {
+	"express": "^4.16.4"
+    }
+}
