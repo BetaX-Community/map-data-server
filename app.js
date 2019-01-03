@@ -20,6 +20,7 @@ app.get("/stops/:lineName", (req, res, next) => {
     var found = parsedJSON.find(function(element) {
 	return element['line_name'] == req.params.lineName;
     });
+    res.header("Access-Control-Allow-Origin", "*");
     res.json(found['busstops']);
 });
 
@@ -27,5 +28,6 @@ app.get("/ways/:lineName", (req, res, next) => {
     var found = parsedJSON.find(function(element) {
 	return element['line_name'] == req.params.lineName;
     });
+    res.header("Access-Control-Allow-Origin", "*");
     res.json(found['ways']);
 });
