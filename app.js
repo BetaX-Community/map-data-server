@@ -5,6 +5,7 @@ var OSM_data = require('../router/build/antananarivo.json');
 var busLines_data = JSON.parse(require('../parsers/busLines.json'));
 var busLines_data_2 = JSON.parse(require('../parsers/busLines-2.json'));
 var lineTypes_data = JSON.parse(require('../parsers/lineTypes.json'));
+var busStops_data = JSON.parse(require('../parsers/busStops.json'));
 
 lineNames = []
 for(var i=0; i < OSM_data.length; i++) {
@@ -65,4 +66,9 @@ app.get("/busLines2/:lineName", (req, res, next) => {
 app.get("/lineTypes", (req, res, next) => {
     res.header("Access-Control-Allow-Origin", "*");
     res.json(lineTypes_data);
+});
+
+app.get("/busStops", (req, res, next) => {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.json(busStops_data);
 });
