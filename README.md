@@ -2,6 +2,14 @@
 
 Serve map data for the editor.
 
+
+## Usage
+
+```sh
+npm i
+npm start
+```
+
 Serve the data in `data/` directory in the following endpoints:
 
 - lines
