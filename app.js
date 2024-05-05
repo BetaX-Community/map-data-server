@@ -1,11 +1,11 @@
 var express = require("express");
 var app = express();
 
-var OSM_data = require('../router/build/antananarivo.json');
-var busLines_data = JSON.parse(require('../parsers/busLines.json'));
-var busLines_data_2 = JSON.parse(require('../parsers/busLines-2.json'));
-var lineTypes_data = JSON.parse(require('../parsers/lineTypes.json'));
-var busStops_data = JSON.parse(require('../parsers/busStops.json'));
+var OSM_data = require('./data/antananarivo.json'); // from router/build
+var busLines_data = JSON.parse(require('./data/busLines.json')); // from parsers
+var busLines_data_2 = JSON.parse(require('./data/busLines-2.json')); // from parsers
+var lineTypes_data = JSON.parse(require('./data/lineTypes.json')); // from parsers
+var busStops_data = JSON.parse(require('./data/busStops.json')); // from parsers
 
 lineNames = []
 for(var i=0; i < OSM_data.length; i++) {
