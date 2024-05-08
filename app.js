@@ -1,5 +1,9 @@
 var express = require("express");
 var app = express();
+require("dotenv").config();
+
+const PORT=process.env.PORT || 2999;
+
 
 var OSM_data = require('./data/antananarivo.json'); // from router/build
 var busLines_data = JSON.parse(require('./data/busLines.json')); // from parsers
@@ -11,10 +15,6 @@ lineNames = []
 for(var i=0; i < OSM_data.length; i++) {
     lineNames.push(OSM_data[i]['line_name']);
 }
-
-app.listen(2999, () => {
-    console.log("Server running on port 2999");
-});
 
 app.get("/lines", (req, res, next) => {
     res.header("Access-Control-Allow-Origin", "*");
@@ -71,4 +71,9 @@ app.get("/lineTypes", (req, res, next) => {
 app.get("/busStops", (req, res, next) => {
     res.header("Access-Control-Allow-Origin", "*");
     res.json(busStops_data);
+});
+
+
+app.listen(PORT, () => {
+    console.log("Server running on port", PORT);
 });
