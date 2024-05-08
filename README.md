@@ -59,3 +59,120 @@ Get bus stops from another provider
 ```http
 GET http://localhost:2999/busStops
 ```
+
+## Data origin and format
+
+`data/antananarivo.json` was generated using the
+[router](https://github.com/BetaX-Community/router)
+
+`/lines`, `/stops/:lineName`, and `/ways/:lineName` expose the data from it.
+
+The data is organized in the following format:
+
+```json
+[
+    {
+        "line_name": <line name>
+        "bus_stops":
+        [{"location": {"lat": <latitude>,
+                       "lng": <longitude>},
+         "name": <bus name>,
+         "role": <stop role>
+        },
+        ...]
+        "ways": [
+            [{"lat": <latitude>,
+              "lng": <longitude>},
+              ...],
+            ...
+        ]
+    },
+    ...
+]
+```
+
+`data/busLines.json`, `data/busLines2.json`, `data/lineTypes.json` and
+`data/busStops.json` were provided by IMV (Institut des Métiers de la
+Ville). Haja Rasolofojaona contacted me and my two other teammates
+(Tianasoa and Nafissa) when we were working on
+[BetaX](http://www.betax.mg) and gave some data that could be used.
+
+![IMV logo](./images/IMV-logo-730x327.jpg)
+
+Institut des Métiers de la Ville (IMV) is a cooperation platform
+between the CUA and the Île de France region for the development of
+municipal capacities.
+
+The format of the data is as following:
+
+`data/busLines.json`
+
+```json
+[
+    {
+        "color": <color>,
+        "itinerary":
+        [
+            places:
+                [
+                    <bus stop names>,
+                    ...
+                ]
+        ],
+        "name": <line name>,
+        "cooperative": <cooperative name>
+    },
+    ...
+]
+```
+
+`data/busLines2.json`
+
+```json
+[
+    "itinerary":
+    [
+        {
+            "type": <line type>,
+            "color": <color>,
+            places:
+            [
+                <bus stop names>,
+                ...
+            ],
+            "name": <line name>,
+            "cooperative": <cooperative name>
+        },
+        ...
+    ],
+    ...
+]
+```
+
+`data/lineTypes.json`
+
+```json
+[
+    {
+        "lines":
+        [
+            <line_name>,
+            ...
+        ],
+        "type": <line type>
+    }
+]
+```
+
+`data/busStops.json`
+
+```json
+[
+    {
+        "lat": <latitude>,
+        "lng": <longitude>,
+        "name" <bus stop name>
+    },
+    ...
+]
+```
