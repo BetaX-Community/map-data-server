@@ -10,6 +10,15 @@ npm i
 npm start
 ```
 
+## Run in docker
+
+Install docker and docker compose and execute
+
+```sh
+docker-compose up -d
+```
+
+
 Serve the data in `data/` directory in the following endpoints:
 
 - lines
