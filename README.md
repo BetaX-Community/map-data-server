@@ -3,6 +3,14 @@
 Serve map data for the editor.
 
 
+## Environment Variables
+This project uses environment variables to manage configuration. Before running the application, make sure to create a `.env` file in the root directory based on the provided `.env.example` file. You can copy the contents of `.env.example` and replace the placeholder values with your actual configuration values.
+
+**Example `.env.example` file:**
+```dotenv
+PORT=3000
+```
+
 ## Usage
 
 ```sh
