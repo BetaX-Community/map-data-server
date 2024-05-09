@@ -1,5 +1,5 @@
 const express = require("express")
-const { loadOSM_data, loadBusLinesData, loadLineTypes, loadBusStop,loadBusLinesData2 } = require("../services/dataLoader")
+const { loadOSM_data, loadBusLinesData, loadLineTypes, loadBusStop,loadBusLinesData2 } = require("../services/dataloader.service")
 const map_route = express.Router()
 
 
