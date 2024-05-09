@@ -6,6 +6,6 @@ COPY . /app
 
 WORKDIR /app
 
-RUN npm i && npm i -g nodemon
+RUN npm i
 
 CMD npm start
