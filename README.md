@@ -12,7 +12,8 @@ npm start
 
 ## Run in docker
 
-install docker and docker compose and execute
+Install docker and docker compose and execute
+
 ```sh
 docker-compose up -d
 ```
