@@ -1,0 +1,12 @@
+version: "3.4"
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: map-data-server:latest
+    container_name: map-data-server
+    ports:
+      - "2999:2999"
+    environment:
+      - PORT=2999
