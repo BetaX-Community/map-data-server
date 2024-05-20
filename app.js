@@ -1,3 +1,4 @@
+const cors=require("cors");
 const dotenv=require("dotenv");
 const express = require("express");
 dotenv.config()
@@ -6,6 +7,7 @@ const app = express();
 const routes = require("./routes/map.route");
 
 app.use(express.json());
+app.use(cors());
 app.use("/", routes);
 
 app.listen(PORT, () => {

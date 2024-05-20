@@ -10,6 +10,7 @@
     "author": "Andrianambinina Marius Rabenarivo",
     "license": "ISC",
     "dependencies": {
+        "cors": "^2.8.5",
         "dotenv": "^16.4.5",
         "express": "^4.16.4",
         "nodemon": "^3.1.0"
