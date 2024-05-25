@@ -34,7 +34,7 @@ Serve the data in `data/` directory in the following endpoints:
 Get all lines
 
 ```http
-GET http://localhost:2999/lines
+GET http://localhost:2999/api/lines
 ```
 
 - stops
@@ -42,7 +42,7 @@ GET http://localhost:2999/lines
 Get stops for a particular line
 
 ```http
-GET localhost:2999/stops/Ligne_160_A
+GET localhost:2999/api/stops/Ligne_160_A
 ```
 
 - ways
@@ -50,7 +50,7 @@ GET localhost:2999/stops/Ligne_160_A
 Get ways for a particular line
 
 ```http
-GET http://localhost:2999/ways/Ligne_160_A
+GET http://localhost:2999/api/ways/Ligne_160_A
 ```
 
 - busLines
@@ -58,7 +58,7 @@ GET http://localhost:2999/ways/Ligne_160_A
 Get lines from another provider
 
 ```http
-GET http://localhost:2999/busLines
+GET http://localhost:2999/api/busLines
 ```
 
 - lineTypes
@@ -66,7 +66,7 @@ GET http://localhost:2999/busLines
 Get different type of lines
 
 ```http
-GET http://localhost:2999/lineTypes
+GET http://localhost:2999/api/lineTypes
 ```
 
 - busStops
@@ -74,7 +74,7 @@ GET http://localhost:2999/lineTypes
 Get bus stops from another provider
 
 ```http
-GET http://localhost:2999/busStops
+GET http://localhost:2999/api/busStops
 ```
 
 ## Data origin and format
@@ -82,7 +82,7 @@ GET http://localhost:2999/busStops
 `data/antananarivo.json` was generated using the
 [router](https://github.com/BetaX-Community/router)
 
-`/lines`, `/stops/:lineName`, and `/ways/:lineName` expose the data from it.
+`/api/lines`, `/api/stops/:lineName`, and `/api/ways/:lineName` expose the data from it.
 
 The data is organized in the following format:
 
