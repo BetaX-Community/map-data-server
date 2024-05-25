@@ -11,7 +11,7 @@ const routes = require("../routes/map.route");
 app.use(express.json());
 app.use(cors());
 if (env === 'dev') {
-  app.use("/", routes);
+  app.use("/api", routes);
 } else {
   app.use("/.netlify/functions/app", routes);
 }
