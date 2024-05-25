@@ -9,7 +9,7 @@ function jsonParser(blob) {
 
 module.exports={
   loadData(filename){
-    const dataFolderPath = path.join(__dirname,"..","data")
+    const dataFolderPath = path.join(process.cwd(), "data")
     const filePath = path.join(dataFolderPath,filename)
     return jsonParser(fs.readFileSync(filePath,"utf-8"));
   }
