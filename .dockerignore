@@ -1,4 +1,4 @@
-.env.exemple
+.env.example
 .gitignore
 docker-compose.yml
 Dockerfile
