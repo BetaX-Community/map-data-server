@@ -17,7 +17,9 @@
         "netlify-cli": "^17.23.8",
         "netlify-lambda": "^2.0.16",
         "nodemon": "^3.1.0",
-        "serverless-http": "^3.2.0"
+        "serverless-http": "^3.2.0",
+        "swagger-jsdoc": "^6.2.8",
+        "swagger-ui-express": "^5.0.0"
     },
     "devDependencies": {
         "@eslint/js": "^9.2.0",
