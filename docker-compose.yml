@@ -6,6 +6,8 @@ services:
       dockerfile: Dockerfile
     image: map-data-server:latest
     container_name: map-data-server
+    volumes:
+      - ./logs/:/root/.pm2/logs/
     ports:
       - "2999:2999"
     environment:
