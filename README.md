@@ -26,6 +26,11 @@ Install docker and docker compose and execute
 docker-compose up -d
 ```
 
+## Docs
+
+```http
+http://localhost:2999/api-docs
+```
 
 Serve the data in `data/` directory in the following endpoints:
 
