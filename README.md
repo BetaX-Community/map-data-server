@@ -4,18 +4,32 @@ Serve map data for the editor.
 
 
 ## Environment Variables
-This project uses environment variables to manage configuration. Before running the application, make sure to create a `.env` file in the root directory based on the provided `.env.example` file. You can copy the contents of `.env.example` and replace the placeholder values with your actual configuration values.
+
+This project uses environment variables to manage
+configuration. Before running the application, make sure to create a
+`.env` file in the root directory based on the provided `.env.example`
+file. You can copy the contents of `.env.example` and replace the
+placeholder values with your actual configuration values.
 
 **Example `.env.example` file:**
 ```dotenv
 PORT=3000
 ```
 
-## Usage
+## How to run?
+
+Using NPM.
 
 ```sh
 npm i
 npm start
+```
+
+Using Yarn.
+
+```sh
+yarn install
+yarn start
 ```
 
 ## Run in docker
@@ -32,7 +46,24 @@ docker-compose up -d
 http://localhost:2999/api-docs
 ```
 
-Serve the data in `data/` directory in the following endpoints:
+## Run tests
+
+Using NPM.
+
+```sh
+npm test
+```
+
+Using Yarn.
+
+```sh
+yarn test
+```
+
+## Usage
+
+This applications serves the data in `data/` directory in the
+following endpoints:
 
 - lines
 
