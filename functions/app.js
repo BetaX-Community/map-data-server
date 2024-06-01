@@ -18,5 +18,5 @@ const server = app.listen(PORT, () => {
     console.log("Server running on port",PORT);
 });
 
-module.exports.handler = serverless(app);
 module.exports = server;
+module.exports.handler = serverless(app);
