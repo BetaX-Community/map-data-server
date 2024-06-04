@@ -14,8 +14,9 @@ app.use(cors());
 
 app.use("/api", routes);
 
-app.listen(PORT, () => {
+const server = app.listen(PORT, () => {
     console.log("Server running on port",PORT);
 });
 
+module.exports = server;
 module.exports.handler = serverless(app);
